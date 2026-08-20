@@ -11,6 +11,8 @@ __pycache__/
 build/
 develop-eggs/
 dist/
+!python-package/dist/
+!python-package/dist/employee_events-0.0.tar.gz
 downloads/
 eggs/
 .eggs/
@@ -160,3 +162,6 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# FastHTML session signing key (auto-generated at runtime)
+.sesskey
