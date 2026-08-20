@@ -71,7 +71,7 @@ class Header(BaseComponent):
         # return a fasthtml H1 objects
         # containing the model's name attribute
         #### YOUR CODE HERE
-        return H1(model.name)
+        return H1(f"{model.name.title()} Performance")
 
 # Create a subclass of base_components/MatplotlibViz
 # called `LineChart`
@@ -193,7 +193,8 @@ class BarChart(MatplotlibViz):
         fig, ax = plt.subplots()
 
         # Run the following code unchanged
-        ax.barh([''], [pred])
+        cmap = plt.get_cmap('RdYlGn_r')
+        ax.barh([''], [pred], color=cmap(pred))
         ax.set_xlim(0, 1)
         ax.set_title('Predicted Recruitment Risk', fontsize=20)
 
